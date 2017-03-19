@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+/*----------------------------------------------------------------
+Kustomisasi Bilah Navbar Yang Terdapat Di Atas Header Halaman Blog
+Oleh: Semar Bingung
+Blog: Adani -:[TUTORIALCID]:-
+URL : http://tutorialcid.blogspot.co.id
+-----------------------------------------------------------------*/
+
+/* Keterangan:
+   Fungsi kode CSS berikut ini adalah untuk mengatur setelan
+   yang digunakan pada bilah navigasi pengganti navbar
+-----------------------------------------------------------*/
+.bilah-menu-atas {
+width: 100%; 
+min-width: 968px;
+position: fixed;
+top: 0px; 
+left: 0px;
+right: 0px;
+height: 29px;
+font: 13px Arial;
+z-index: 99;
+white-space: nowrap;
+background: #1975D1;
+background: -moz-linear-gradient(center top , #1975D1 0%, #00478F 100%);
+background: -webkit-gradient(linear, left top, left bottom, from(#1975D1), to(#00478F));
+box-shadow: 0px 2px 4px rgb(14, 90, 140);
+border-bottom: 1px solid     #4D94DB;
+}
+
+.kolom-utama { 
+z-index: 100;
+width: 968px;
+height: 27px;
+margin: 0px auto;
+padding: 0px;
+}
+
+.kolom-menu {
+width: auto;
+height: auto;
+margin: 0px;
+float: left;
+display: inline;
+}
+
+.kolom-menu ul {
+height: auto;
+margin: 0px;
+padding: 0px;
+}
+
+/* Keterangan:
+   Fungsi kode CSS berikut ini adalah untuk mengatur setelan
+   yang digunakan pada tab menu
+-----------------------------------------------------------*/
+.kolom-menu ul li {
+float: left;
+position: relative;
+list-style: none outside none;
+margin-right: 1px;
+margin-left: 1px;
+padding-left: 1px;
+padding-right: 1px;
+height: 25px;
+border-top: none;
+border-bottom: 1px solid #3385D6;
+border-left: 1px solid #3385D6;
+border-right: 1px solid #3385D6;
+border-radius: 0px 0px 3px 3px;
+-moz-border-radius: 0px 0px 3px 3px;
+-webkit-border-radius: 0px 0px 3px 3px;
+background: #005CB8;
+background: -moz-linear-gradient(center top , #005CB8, #003D7A) repeat scroll 0% 0%;
+background: -webkit-gradient(linear, left top, left bottom, from(#005CB8), to(#003D7A));
+}
+
+/* Keterangan:
+   Setelan warna huruf dapat diubah dengan mengganti kode warna
+   yang terdapat pada color: #ffffff;
+----------------------------------------------------------------------*/
+.kolom-menu ul li a {
+color: #ffffff;
+font-weight: bold;
+text-shadow: -1px -1px rgba(0, 0, 0, 0.2);
+text-decoration: none;
+display: inline-block;
+padding-top: 5px;
+padding-right: 10px;
+padding-bottom: 4px;
+padding-left: 10px;
+position: relative;
+}
+
+/* Keterangan:
+   Rangkaian CSS di bawah ini digunakan untuk menentukan
+   setelan warna latar menu ketika disorot dengan memakai mouse pointer
+----------------------------------------------------------------------*/
+.kolom-menu ul li a:hover, .kolom-menu ul li a:focus {
+border-radius: 0px 0px 2px 2px;
+-moz-border-radius: 0px 0px 2px 2px;
+-webkit-border-radius: 0px 0px 2px 2px;
+background: #CC0066;
+background: -moz-linear-gradient(center top , #CC0066, #8F0047) repeat scroll 0% 0%;
+background: -webkit-gradient(linear, left top, left bottom, from(#CC0066), to(#8F0047));
+}
+
+/* Fungsi CSS di bawah ini untuk mengatur setelan Sub Menu Pertama, Kedua dan Ketiga
+   Keterangan:
+   Warna garis dan background dapat diubah dengan mengganti
+   kode warna yang terdapat pada border: 1px solid #4D94DB; dan background: #005CB8;
+-----------------------------------------------------------------------------------*/
+.kolom-menu ul li ul,
+.kolom-menu ul li:hover li ul, 
+.kolom-menu ul li:active li ul, 
+.kolom-menu ul li:focus li ul,
+.kolom-menu ul li ul li:hover li ul, 
+.kolom-menu ul li ul li:active li ul, 
+.kolom-menu ul li ul li:focus li ul {
+z-index: 100;
+position: absolute;
+left: -3000px;
+height: auto;
+width: auto;
+margin-right: 10px;
+padding-bottom: 1px;
+border: 1px solid #4D94DB;
+background: #005CB8;
+white-space: normal;
+text-align: justify;
+padding: 2px 0px;
+}
+
+.kolom-menu ul li ul li, 
+.kolom-menu ul li ul li ul li,
+.kolom-menu ul li ul li ul li ul li {
+border: none; background: inherit; height: auto;
+border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px;
+}
+
+.kolom-menu ul li ul li a, .kolom-menu ul li ul li ul li a,
+.kolom-menu ul li ul li ul li ul li a {
+margin-right: 0px; border: none; padding-right: 0px;
+}
+
+.kolom-menu ul li ul li a:hover, .kolom-menu ul li ul li a:focus,
+.kolom-menu ul li ul li ul li a:hover, .kolom-menu ul li ul li ul li a:focus,
+.kolom-menu ul li ul li ul li ul li a:hover, .kolom-menu ul li ul li ul li ul li a:focus {
+border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px;
+}
+
+/* Kode CSS untuk setelan lebar kolom dan posisi sub menu pertama
+----------------------------------------------------------------*/
+.kolom-menu ul li ul li a { width: 150px; }
+
+.kolom-menu ul li:hover ul, 
+.kolom-menu ul li:active ul, 
+.kolom-menu ul li:focus ul {
+top: auto; left: 0px; 
+}
+
+/* Kode CSS untuk setelan lebar kolom sub menu kedua
+---------------------------------------------------*/
+.kolom-menu ul li ul li ul li a { width: 150px; }
+
+/* Keterangan:
+   Posisi Sub Menu Kedua = Lebar Kolom Sub Menu Pertama + 12px
+   Sehingga jika lebar kolom sub menu pertama adalah 150px,
+   maka posisi sub menu kedua adalah 162px
+--------------------------------------------------------------*/
+.kolom-menu ul li ul li:hover ul, 
+.kolom-menu ul li ul li:active ul, 
+.kolom-menu ul li ul li:focus ul {
+top: -1px; left: 162px;
+}
+
+/* Kode CSS untuk setelan lebar kolom sub menu ketiga
+----------------------------------------------------*/
+.kolom-menu ul li ul li ul li ul li a { width: 150px; }
+
+/* Keterangan:
+   Posisi Sub Menu Ketiga = Lebar Kolom Sub Menu Kedua + 12px
+   Sehingga jika lebar kolom sub menu kedua adalah 150px,
+   maka posisi sub menu ketiga adalah 162px
+------------------------------------------------------------*/
+.kolom-menu ul li ul li ul li:hover ul, 
+.kolom-menu ul li ul li ul li:active ul, 
+.kolom-menu ul li ul li ul li:focus ul {
+top: -1px; left: 162px;
+}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+<div class="bilah-menu-atas" id="bilahmenuatas">
+<div class="kolom-utama">
+<div class="kolom-menu">
+<ul>
+<li><a href="http://eltelu.blogspot.com/"><img alt="L3" src="https://lh6.googleusercontent.com/-GrWWmwsRww4/UFjcGGzlSYI/AAAAAAAAAn0/rP9UFz050sk/s800/Beranda.png" height="13px" border="0" width="24px"/></a></li>
+<li><a href="#">Tab Menu Kiri 1</a>
+<ul>
+<li><a href="http://tutorialcid.blogspot.co.id">Sub Menu Tingkat 1.a</a></li>
+<li><a href="http://tutorialcid.blogspot.co.id">Sub Menu Tingkat 1.b</a></li>
+<li><a href="#">Sub Menu Tingkat 1.c</a>
+<ul>
+<li><a href="http://tutorialcid.blogspot.co.id">Sub Menu Tingkat 2.a</a></li>
+<li><a href="http://tutorialcid.blogspot.co.id">Sub Menu Tingkat 2.b</a></li>
+<li><a href="#">Sub Menu Tingkat 2.c</a>
+<ul>
+<li><a href="http://tutorialcid.blogspot.co.id">Sub Menu Tingkat 3.a</a></li>
+<li><a href="http://tutorialcid.blogspot.co.id">Sub Menu Tingkat 3.b</a></li>
+<li><a href="http://tutorialcid.blogspot.co.id">Sub Menu Tingkat 3.c</a></li>
+<li><a href="http://tutorialcid.blogspot.co.id">Sub Menu Tingkat 3.d</a></li>
+</ul>
+</li>
+<li><a href="http://tutorialcid.blogspot.co.id/">Sub Menu Tingkat 2.d</a></li>
+</ul>
+</li>
+<li><a href="http://tutorialcid.blogspot.co.id/">Sub Menu Tingkat 1.d</a></li>
+</ul>
+</li>
+<li><a href="http://tutorialcid.blogspot.co.id/">Tab Menu Kiri 2</a></li>
+<li><a href="http://tutorialcid.blogspot.co.id/">Tab Menu Kiri 3</a></li>
+</ul>
+</div>
+<div class="kolom-menu" style="float: right;">
+<ul style="float: right;">
+<li><a href="http://tutorialcid.blogspot.co.id/">Tab Menu Kanan 1</a></li>
+<li><a href="http://tutorialcid.blogspot.co.id">Tab Menu Kanan 2</a></li>
+</ul>
+</div>
+</div>
+</div>
+<script>
+
+</script>
+</body>
+</html>
